@@ -1,0 +1,33 @@
+{
+  "name": "duet-rpc",
+  "version": "0.1.0",
+  "description": "Bidirectional type-safe RPC over WebSocket",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": ["rpc", "websocket", "typescript", "bidirectional", "ipc", "type-safe"],
+  "author": "MrLeonardos",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrLeonardos/duet-rpc.git"
+  },
+  "peerDependencies": {
+    "zod": ">=3.22.0"
+  },
+  "dependencies": {
+    "devalue": "^5.7.1",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "@types/ws": "^8.18.1",
+    "typescript": "^6.0.2",
+    "zod": "^4.3.6"
+  }
+}
