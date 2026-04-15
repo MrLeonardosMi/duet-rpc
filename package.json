@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrLeonardos/duet-rpc.git"
+    "url": "https://github.com/MrLeonardosMi/duet-rpc.git"
   },
   "peerDependencies": {
     "zod": ">=3.22.0"
