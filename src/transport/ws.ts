@@ -1,5 +1,5 @@
 import WebSocket, { WebSocketServer } from 'ws';
-import type { Transport, TransportServer } from './types';
+import type { Transport, TransportServer } from './types.js';
 
 class WsTransport implements Transport {
   private messageHandlers: Set<(data: string) => void> = new Set();

@@ -1,12 +1,29 @@
 {
   "name": "duet-rpc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bidirectional type-safe RPC over WebSocket",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "LICENSE", "README.md"],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node scripts/build.mjs",
     "test": "bun test",
     "prepublishOnly": "bun run build"
   },
@@ -17,8 +34,12 @@
     "type": "git",
     "url": "https://github.com/MrLeonardosMi/duet-rpc.git"
   },
+  "bugs": {
+    "url": "https://github.com/MrLeonardosMi/duet-rpc/issues"
+  },
+  "homepage": "https://github.com/MrLeonardosMi/duet-rpc#readme",
   "peerDependencies": {
-    "zod": ">=3.22.0"
+    "zod": "^4.0.0"
   },
   "dependencies": {
     "devalue": "^5.7.1",
@@ -27,7 +48,7 @@
   "devDependencies": {
     "@types/bun": "^1.1.0",
     "@types/ws": "^8.18.1",
-    "typescript": "^6.0.2",
+    "typescript": "~6.0.2",
     "zod": "^4.3.6"
   }
 }

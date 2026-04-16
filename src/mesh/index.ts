@@ -1,10 +1,10 @@
-export { createHub } from './hub';
-export type { Hub, HubOptions } from './hub';
-export { createMeshPeer } from './peer';
+export { createHub } from './hub.js';
+export type { Hub, HubOptions } from './hub.js';
+export { createMeshPeer } from './peer.js';
 export type {
   MeshPeerInstance,
   MeshPeerOptions,
   MeshStrategy,
   MeshHubStrategy,
   MeshDirectStrategy,
-} from './peer';
+} from './peer.js';

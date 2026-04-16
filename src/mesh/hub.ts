@@ -1,6 +1,6 @@
 import { WebSocketServer, WebSocket } from 'ws';
-import { serialize, deserialize } from '../serialization';
-import type { MeshMessage } from './protocol';
+import { serialize, deserialize } from '../serialization.js';
+import type { MeshMessage } from './protocol.js';
 
 export interface HubOptions {
   port: number;

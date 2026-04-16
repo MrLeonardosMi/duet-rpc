@@ -1,13 +1,13 @@
-import type { ContractSide, ContractDef, ImplementationOf, RemoteOf, ProcedureDef } from '../contract';
-import type { MiddlewareFn, MiddlewareContext } from '../middleware';
-import type { Transport } from '../transport/types';
-import type { MeshMessage, MeshRequest, MeshResponse } from './protocol';
-import { generateId } from '../protocol';
-import { serialize, deserialize } from '../serialization';
-import { runMiddleware } from '../middleware';
-import { PeerError } from '../errors';
-import { createWsClient, createWsServer } from '../transport/ws';
-import { ReconnectingTransport } from '../reconnect';
+import type { ContractSide, ContractDef, ImplementationOf, RemoteOf, ProcedureDef } from '../contract.js';
+import type { MiddlewareFn, MiddlewareContext } from '../middleware.js';
+import type { Transport } from '../transport/types.js';
+import type { MeshMessage, MeshRequest, MeshResponse } from './protocol.js';
+import { generateId } from '../protocol.js';
+import { serialize, deserialize } from '../serialization.js';
+import { runMiddleware } from '../middleware.js';
+import { PeerError } from '../errors.js';
+import { createWsClient, createWsServer } from '../transport/ws.js';
+import { ReconnectingTransport } from '../reconnect.js';
 
 export interface MeshHubStrategy {
   strategy: 'hub';

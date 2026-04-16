@@ -1,11 +1,11 @@
-import type { Transport } from './transport/types';
-import type { ContractSide, ImplementationOf, RemoteOf, ProcedureDef } from './contract';
-import type { MiddlewareFn, MiddlewareContext } from './middleware';
-import type { RpcMessage, RpcRequest, RpcResponse } from './protocol';
-import { generateId } from './protocol';
-import { serialize, deserialize } from './serialization';
-import { runMiddleware } from './middleware';
-import { PeerError } from './errors';
+import type { Transport } from './transport/types.js';
+import type { ContractSide, ImplementationOf, RemoteOf, ProcedureDef } from './contract.js';
+import type { MiddlewareFn, MiddlewareContext } from './middleware.js';
+import type { RpcMessage, RpcRequest, RpcResponse } from './protocol.js';
+import { generateId } from './protocol.js';
+import { serialize, deserialize } from './serialization.js';
+import { runMiddleware } from './middleware.js';
+import { PeerError } from './errors.js';
 
 export interface PeerOptions {
   transport: Transport;

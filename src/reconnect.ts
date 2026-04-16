@@ -1,4 +1,4 @@
-import type { Transport } from './transport/types';
+import type { Transport } from './transport/types.js';
 
 export interface ReconnectOptions {
   /** Base interval in ms (default 1000) */
