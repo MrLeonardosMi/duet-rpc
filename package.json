@@ -1,6 +1,6 @@
 {
   "name": "duet-rpc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Bidirectional type-safe RPC over WebSocket",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -18,7 +18,11 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "LICENSE", "README.md"],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "engines": {
     "node": ">=18"
   },
@@ -27,7 +31,14 @@
     "test": "bun test",
     "prepublishOnly": "bun run build"
   },
-  "keywords": ["rpc", "websocket", "typescript", "bidirectional", "ipc", "type-safe"],
+  "keywords": [
+    "rpc",
+    "websocket",
+    "typescript",
+    "bidirectional",
+    "ipc",
+    "type-safe"
+  ],
   "author": "MrLeonardos",
   "license": "MIT",
   "repository": {
